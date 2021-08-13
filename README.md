@@ -7,7 +7,9 @@ Basic and Fast utils API for Developers
 	<id>jitpack.io</id>
 	<url>https://jitpack.io</url>
 </repository>
+```
 
+```xml
 <dependency>
 	<groupId>com.github.furkanbalci0</groupId>
 	<artifactId>Betacraft-Factory</artifactId>
