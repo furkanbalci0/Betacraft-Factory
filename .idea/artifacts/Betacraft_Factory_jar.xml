@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Betacraft-Factory:jar">
+    <output-path>$PROJECT_DIR$/../../Betacraft/Plugins</output-path>
+    <root id="archive" name="Betacraft-Factory.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Betacraft-Factory" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.12.10/mongo-java-driver-3.12.10.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:3.12.10" />
+    </root>
+  </artifact>
+</component>
