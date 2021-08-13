@@ -2,7 +2,7 @@
 Basic and Fast utils API for Developers
 
 #
-```css
+```sh
 	<repository>
 		id>jitpack.io</id>
 		<url>https://jitpack.io</url>
