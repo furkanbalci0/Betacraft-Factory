@@ -13,6 +13,6 @@ Basic and Fast utils API for Developers
 <dependency>
 	<groupId>com.github.furkanbalci0</groupId>
 	<artifactId>Betacraft-Factory</artifactId>
-	<version>VERSION</version>
+	<version>1.0</version>
 </dependency>
 ```
