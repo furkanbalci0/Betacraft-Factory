@@ -100,7 +100,20 @@ public class FormattedTime {
     }
 
 
+
     //STATIC FUNCTIONS
+
+    /**
+     * @param timeInSeconds Time in seconds.
+     * @return Formatted time.
+     */
+    public static String get(long timeInSeconds){
+
+        FormattedTime time = new FormattedTime(timeInSeconds);
+
+        return time.get();
+    }
+
 
     /**
      * @param format For example: dd/MM/yyyy HH:mm:ss

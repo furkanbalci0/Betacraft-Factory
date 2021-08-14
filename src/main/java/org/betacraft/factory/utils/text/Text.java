@@ -36,7 +36,6 @@ public class Text {
             list.append("§7").append(character);
         }
 
-        System.out.println("merhaba barış");
         return list.toString();
 
 
@@ -61,7 +60,7 @@ public class Text {
      * @return Sorts the specified characters.
      */
     public static String progress(double percent) {
-        return progress('?', percent, 40);
+        return progress('▏', percent, 40);
     }
 
 
