@@ -129,6 +129,7 @@ public class Text {
             }
         }
 
+        System.out.printf("test");
         int halvedMessageSize = messagePxSize / 2;
         int toCompensate = 154 - halvedMessageSize;
         int spaceLength = DefaultFontInfo.SPACE.getLength() + 1;
