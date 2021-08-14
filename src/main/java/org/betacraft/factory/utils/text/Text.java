@@ -35,7 +35,11 @@ public class Text {
         for (int i = 0; i < (width - loop); i++) {
             list.append("§7").append(character);
         }
+
+        System.out.println("merhaba barýþ");
         return list.toString();
+
+
     }
 
     /**
