@@ -33,10 +33,10 @@ public class Text {
         }
 
         for (int i = 0; i < (width - loop); i++) {
-            list.append("§7").append(character);
+            list.append("Â§7").append(character);
         }
 
-        System.out.println("merhaba barýþ");
+        System.out.println("merhaba barÄ±ÅŸ");
         return list.toString();
 
 
@@ -71,7 +71,7 @@ public class Text {
      * @return Text you want to convereted but uncolored.
      */
     public static String uncolored(String text) {
-        return text.replace("§", "&")
+        return text.replace("Â§", "&")
                 .replace("&0", "")
                 .replace("&1", "")
                 .replace("&2", "")
@@ -121,7 +121,7 @@ public class Text {
         boolean isBold = false;
 
         for (char c : message.toCharArray()) {
-            if (c == '§') {
+            if (c == 'Â§') {
                 previousCode = true;
             } else if (previousCode) {
                 previousCode = false;
