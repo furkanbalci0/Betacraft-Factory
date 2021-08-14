@@ -8,13 +8,27 @@ import org.bukkit.scoreboard.*;
 public class BScoreboard {
 
 
+    private final Player player;
+    private Objective objective;
+    private Scoreboard board;
+
+    public BScoreboard(Player player) {
+
+        this.player = player;
+
+        this.board = Bukkit.getScoreboardManager().getNewScoreboard();
+
+        this.objective = board.registerNewObjective("", player.getName());
+
+        this.objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+
+        player.setScoreboard(board);
+
+    }
+
     public void setScoreBoard(Player player) {
 
-        Scoreboard board = Bukkit.getScoreboardManager().getNewScoreboard();
-        Objective obj = board.registerNewObjective("ServerName", "dummy");
-        obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-
-        Score onlineName = obj.getScore(ChatColor.GRAY + "» Online");
+        Score onlineName = this.objective.getScore(ChatColor.GRAY + "ï¿½ Online");
         onlineName.setScore(15);
         Team onlineCounter = board.registerNewTeam("onlineCounter");
 
@@ -26,15 +40,15 @@ public class BScoreboard {
             onlineCounter.setPrefix("" + ChatColor.DARK_RED + Bukkit.getOnlinePlayers().size() + ChatColor.RED + "/" + ChatColor.DARK_RED + Bukkit.getMaxPlayers());
         }
 
-        obj.getScore(ChatColor.BLACK + "" + ChatColor.WHITE).setScore(14);
+        this.objective.getScore(ChatColor.BLACK + "" + ChatColor.WHITE).setScore(14);
 
-        Score money = obj.getScore(ChatColor.GRAY + "» Money");
+        Score money = this.objective.getScore(ChatColor.GRAY + "ï¿½ Money");
         money.setScore(13);
 
         Team moneyCounter = board.registerNewTeam("moneyCounter");
         moneyCounter.addEntry(ChatColor.RED + "" + ChatColor.WHITE);
         moneyCounter.setPrefix(ChatColor.GREEN + "$" + 100);
-        obj.getScore(ChatColor.RED + "" + ChatColor.WHITE).setScore(12);
+        this.objective.getScore(ChatColor.RED + "" + ChatColor.WHITE).setScore(12);
 
 
         player.setScoreboard(board);
